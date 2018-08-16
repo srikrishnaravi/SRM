@@ -1,0 +1,477 @@
+2018-06-04 17:33:10 ERROR  : ERROR:  relation "Demo" already exists
+2018-06-04 17:33:26 ERROR  : ERROR:  relation "demo" does not exist
+LINE 1: INSERT INTO Demo(id, name, email,address,telephone)
+                    ^
+2018-06-04 17:34:05 ERROR  : ERROR:  relation "Demo" already exists
+2018-06-04 17:34:41 ERROR  : ERROR:  relation "demo1" does not exist
+LINE 1: INSERT INTO Demo1(id, name, email,address,telephone)
+                    ^
+2018-06-04 17:37:00 ERROR  : ERROR:  syntax error at or near "use"
+LINE 1: use data;
+        ^
+2018-06-04 17:37:12 ERROR  : ERROR:  syntax error at or near "Use"
+LINE 1: Use data;
+        ^
+2018-06-04 17:41:53 ERROR  : ERROR:  malformed array literal: "krishna"
+LINE 3:  (1,'krishna','krish@gmail.com','wer234','3216548');
+            ^
+DETAIL:  Array value must start with "{" or dimension information.
+2018-06-05 10:16:58 ERROR  : ERROR:  column "age" contains null values
+2018-06-05 10:55:23 ERROR  : ERROR:  syntax error at or near "id"
+LINE 1: UPDATE srm1 SET age = 20 where name id=1;
+                                            ^
+2018-06-05 10:55:36 ERROR  : ERROR:  column "age" of relation "srm1" does not exist
+LINE 1: UPDATE srm1 SET age = 20 where  id=1;
+                        ^
+2018-06-05 10:56:00 ERROR  : ERROR:  column "age" of relation "srm1" does not exist
+LINE 1: UPDATE srm1 SET age = 20 where  id=1;
+                        ^
+2018-06-05 10:58:30 ERROR  : ERROR:  relation "public.Srm1" does not exist
+LINE 1: UPDATE public."Srm1"
+               ^
+2018-06-05 11:01:58 ERROR  : ERROR:  malformed array literal: "krish"
+LINE 3:     VALUES (1,'krish','dem@gmal.com','qwer',123,21);
+                      ^
+DETAIL:  Array value must start with "{" or dimension information.
+2018-06-05 11:41:05 ERROR  : ERROR:  syntax error at or near ","
+LINE 3:     VALUES (1, ,'krish',wer@123.com,'sdjflasf', 7852458,12);
+                       ^
+2018-06-05 11:41:23 ERROR  : ERROR:  syntax error at or near "com"
+LINE 3:     VALUES (1,'krish',wer@123.com,'sdjflasf',7852458,12);
+                                      ^
+2018-06-05 11:41:49 ERROR  : ERROR:  malformed array literal: "krish"
+LINE 3:     VALUES (1,'krish','wer@123.com','sdjflasf',7852458,12);
+                      ^
+DETAIL:  Array value must start with "{" or dimension information.
+2018-06-05 11:46:38 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:47:07 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:47:08 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:47:08 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:47:08 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:47:08 ERROR  : ERROR:  value too long for type character(1)
+2018-06-05 11:48:26 ERROR  : ERROR:  cannot drop table "Demo" because other objects depend on it
+DETAIL:  default for table "Srm1" column id depends on sequence "Demo_id_seq"
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-06-06 12:25:51 ERROR  : ERROR:  syntax error at or near "Desc"
+LINE 1: Desc student;
+        ^
+2018-06-06 12:28:21 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \d+ student;
+        ^
+2018-06-07 17:08:41 ERROR  : ERROR:  column "id" does not exist
+LINE 1: Delete from student where id=0;
+                                  ^
+HINT:  Perhaps you meant to reference the column "student.sid".
+2018-06-07 17:09:40 ERROR  : ERROR:  syntax error at or near "table"
+LINE 1: update table student set id=2;
+               ^
+2018-06-07 17:10:06 ERROR  : ERROR:  syntax error at or near "tabl"
+LINE 1: tabl
+        ^
+2018-06-07 17:10:20 ERROR  : ERROR:  column "id" does not exist
+LINE 1: update  student set id=2 where id=1;
+                                       ^
+HINT:  Perhaps you meant to reference the column "student.sid".
+2018-06-07 17:12:36 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='ECE'::integer WHERE 
+                                                           ^
+2018-06-07 17:12:54 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='ECE'::integer WHERE 
+                                                           ^
+2018-06-07 17:13:18 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:13:22 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:13:25 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:13:28 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:13:31 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:13:34 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='13'::integer WHERE 
+                                                          ^
+2018-06-07 17:23:49 ERROR  : ERROR:  column "sdob" cannot be cast automatically to type date
+HINT:  You might need to specify "USING sdob::date".
+2018-06-11 18:22:25 ERROR  : ERROR:  relation "Approval" already exists
+2018-06-21 12:22:25 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-06-21 12:22:27 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, pg_get_userbyid(spcowne...
+                                ^
+2018-06-21 12:22:28 ERROR  : Column not found in pgSet: rolcatupdate
+2018-06-21 12:22:29 ERROR  : Column not found in pgSet: rolconfig
+2018-06-21 12:22:30 ERROR  : Column not found in pgSet: rolcatupdate
+2018-06-21 12:22:30 ERROR  : Column not found in pgSet: rolconfig
+2018-06-21 12:22:31 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-06-21 12:22:32 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-06-21 12:22:34 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-06-21 12:22:39 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-06-21 15:55:59 ERROR  : ERROR:  syntax error at or near "describe"
+LINE 1: describe student;
+        ^
+2018-06-21 15:56:11 ERROR  : ERROR:  syntax error at or near "desc"
+LINE 1: desc student;
+        ^
+2018-06-21 15:56:29 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \d+ student;
+        ^
+2018-06-21 15:56:37 ERROR  : ERROR:  syntax error at or near "d"
+LINE 1: d+ student;
+        ^
+2018-06-21 15:57:37 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \d student;
+        ^
+2018-06-21 15:58:30 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-21 16:36:17 ERROR  : ERROR:  zero-length delimited identifier at or near """"
+LINE 1: delete from student where sid="";
+                                      ^
+2018-06-21 16:36:43 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='dao'::integer WHERE 
+                                                           ^
+2018-06-21 16:36:46 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='dao'::integer WHERE 
+                                                           ^
+2018-06-21 16:36:47 ERROR  : ERROR:  syntax error at end of input
+LINE 1: UPDATE public.student SET sid='dao'::integer WHERE 
+                                                           ^
+2018-06-22 17:56:18 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-22 17:56:26 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-06-22 17:56:51 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-22 17:56:59 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-06-22 17:57:28 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-22 17:57:41 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-22 17:57:49 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-06-22 17:58:26 ERROR  : ERROR:  could not create unique index "student_pkey"
+DETAIL:  Key (sid)=(21) is duplicated.
+2018-06-22 18:01:16 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-06-22 18:01:21 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-07-02 10:33:32 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-07-02 10:33:55 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-07-02 10:34:29 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-07-02 10:35:30 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-07-02 10:35:54 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-07-02 10:36:07 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-07-02 12:12:57 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-02 12:12:59 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, pg_get_userbyid(spcowne...
+                                ^
+2018-07-02 12:13:01 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-02 12:13:03 ERROR  : Column not found in pgSet: rolconfig
+2018-07-02 12:13:04 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-02 12:13:05 ERROR  : Column not found in pgSet: rolconfig
+2018-07-02 12:13:05 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-02 12:13:07 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-02 12:13:12 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-03 15:34:39 ERROR  : ERROR:  syntax error at or near "elect"
+LINE 1: elect e from elegibility e;
+        ^
+2018-07-09 09:54:08 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-09 09:54:10 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, pg_get_userbyid(spcowne...
+                                ^
+2018-07-09 09:54:11 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-09 09:54:12 ERROR  : Column not found in pgSet: rolconfig
+2018-07-09 09:54:13 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-09 09:54:13 ERROR  : Column not found in pgSet: rolconfig
+2018-07-09 09:54:14 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-09 09:54:15 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-09 09:54:17 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-17 10:03:41 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-17 10:03:43 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, pg_get_userbyid(spcowne...
+                                ^
+2018-07-17 10:03:45 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-17 10:03:46 ERROR  : Column not found in pgSet: rolconfig
+2018-07-17 10:03:46 ERROR  : Column not found in pgSet: rolcatupdate
+2018-07-17 10:03:47 ERROR  : Column not found in pgSet: rolconfig
+2018-07-17 10:03:47 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-17 10:03:49 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-17 10:03:51 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-07-18 16:42:49 ERROR  : ERROR:  cannot drop table grade because other objects depend on it
+DETAIL:  constraint fk8mj65w7rh8aetpu3cij0ggtpq on table student depends on table grade
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-18 16:42:57 ERROR  : ERROR:  cannot drop table grade because other objects depend on it
+DETAIL:  constraint fk8mj65w7rh8aetpu3cij0ggtpq on table student depends on table grade
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-18 16:43:15 ERROR  : ERROR:  cannot drop table grade because other objects depend on it
+DETAIL:  constraint fk8mj65w7rh8aetpu3cij0ggtpq on table student depends on table grade
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:36:59 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:37:09 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:38:46 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:38:53 ERROR  : ERROR:  cannot drop table employee7 because other objects depend on it
+DETAIL:  constraint fksw5lc5c3rgvurc6q2k2b7b3be on table salary7 depends on table employee7
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:39:28 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:39:35 ERROR  : ERROR:  cannot drop table salary8 because other objects depend on it
+DETAIL:  constraint fkqwxhjo9u2emf95a1c5jjxtnc2 on table employee8 depends on table salary8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:39:41 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:39:52 ERROR  : ERROR:  cannot drop table salary8 because other objects depend on it
+DETAIL:  constraint fkqwxhjo9u2emf95a1c5jjxtnc2 on table employee8 depends on table salary8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:40:24 ERROR  : ERROR:  cannot drop table employee8 because other objects depend on it
+DETAIL:  constraint fkkj95xbacilgqrky779x4d668x on table salary8 depends on table employee8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:40:28 ERROR  : ERROR:  cannot drop table salary8 because other objects depend on it
+DETAIL:  constraint fkqwxhjo9u2emf95a1c5jjxtnc2 on table employee8 depends on table salary8
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:40:35 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fkchpdsnwyo6ja7di3yuytfneg7 on table employee depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 10:48:42 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fkborlxlmm5cvqp9lkuyunt1yoi on table salary depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 11:32:16 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fkborlxlmm5cvqp9lkuyunt1yoi on table salary depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 14:31:59 ERROR  : ERROR:  cannot drop table employee77 because other objects depend on it
+DETAIL:  constraint fknnmpitjwgp1g83atdi31xc102 on table salary77 depends on table employee77
+constraint fkl1hqjj2racnn7ueex54nlsw0i on table salary77 depends on table employee77
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-23 14:32:15 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fkborlxlmm5cvqp9lkuyunt1yoi on table salary depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-24 14:54:38 ERROR  : ERROR:  cannot drop table employee77 because other objects depend on it
+DETAIL:  constraint fkl1hqjj2racnn7ueex54nlsw0i on table salary77 depends on table employee77
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-24 17:14:41 ERROR  : ERROR:  null value in column "employeeid" violates not-null constraint
+DETAIL:  Failing row contains (1, null, null, null, null).
+2018-07-24 17:15:16 ERROR  : ERROR:  cannot drop table employee77 because other objects depend on it
+DETAIL:  constraint fkl1hqjj2racnn7ueex54nlsw0i on table salary77 depends on table employee77
+constraint fknnmpitjwgp1g83atdi31xc102 on table salary77 depends on table employee77
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-24 17:20:09 ERROR  : ERROR:  cannot drop table employee77 because other objects depend on it
+DETAIL:  constraint fknnmpitjwgp1g83atdi31xc102 on table salary77 depends on table employee77
+constraint fkl1hqjj2racnn7ueex54nlsw0i on table salary77 depends on table employee77
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-24 17:26:37 ERROR  : ERROR:  cannot drop table employee77 because other objects depend on it
+DETAIL:  constraint fknnmpitjwgp1g83atdi31xc102 on table salary77 depends on table employee77
+constraint fkl1hqjj2racnn7ueex54nlsw0i on table salary77 depends on table employee77
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:17:58 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fkn43b2j9tiyx99cepesudo11a6 on table salarydetails depends on table employee
+constraint fknbvac8s9yhk8l83a0h1c4hh3w on table salarydetails depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:18:05 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fk946avmifq0jue8y6ju7w9ghlo on table salarydetails depends on table salary
+constraint fk8qk4llf2l7cua9dmhlvl5gumm on table salarydetails depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:31:51 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fk8qk4llf2l7cua9dmhlvl5gumm on table salarydetails depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:40:06 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fk8qk4llf2l7cua9dmhlvl5gumm on table salarydetails depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:53:12 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fk8qk4llf2l7cua9dmhlvl5gumm on table salarydetails depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 14:53:18 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fknbvac8s9yhk8l83a0h1c4hh3w on table salarydetails depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 17:04:36 ERROR  : ERROR:  cannot drop table employee because other objects depend on it
+DETAIL:  constraint fknbvac8s9yhk8l83a0h1c4hh3w on table salarydetails depends on table employee
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 17:04:41 ERROR  : ERROR:  cannot drop table salary because other objects depend on it
+DETAIL:  constraint fk8qk4llf2l7cua9dmhlvl5gumm on table salarydetails depends on table salary
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-07-26 18:54:29 ERROR  : ERROR:  null value in column "employeeid" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-07-26 19:28:06 ERROR  : ERROR:  null value in column "employeeid" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-08-14 17:53:49 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-08-14 17:53:50 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, pg_get_userbyid(spcowne...
+                                ^
+2018-08-14 17:53:51 ERROR  : Column not found in pgSet: rolcatupdate
+2018-08-14 17:53:52 ERROR  : Column not found in pgSet: rolconfig
+2018-08-14 17:53:55 ERROR  : Column not found in pgSet: rolcatupdate
+2018-08-14 17:53:56 ERROR  : Column not found in pgSet: rolconfig
+2018-08-14 17:53:57 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-08-14 17:53:59 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-08-14 17:54:00 ERROR  : ERROR:  column "datconfig" does not exist
+LINE 1: ...b.dattablespace AS spcoid, spcname, datallowconn, datconfig,...
+                                                             ^
+2018-08-14 18:55:39 ERROR  : ERROR:  insert or update on table "city" violates foreign key constraint "fk6p2u50v8fg2y0js6djc6xanit"
+DETAIL:  Key (state_id)=(1) is not present in table "state".
+2018-08-16 10:09:45 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:09:47 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:09:50 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:09:53 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:10:14 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:10:17 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:10:24 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:10:26 ERROR  : ERROR:  null value in column "city_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+2018-08-16 10:10:50 ERROR  : ERROR:  null value in column "state_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-08-16 10:11:10 ERROR  : ERROR:  null value in column "state_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-08-16 10:11:17 ERROR  : ERROR:  null value in column "state_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-08-16 10:11:20 ERROR  : ERROR:  null value in column "state_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+2018-08-16 10:11:41 ERROR  : ERROR:  update or delete on table "state" violates foreign key constraint "fk6p2u50v8fg2y0js6djc6xanit" on table "city"
+DETAIL:  Key (state_id)=(1) is still referenced from table "city".
+2018-08-16 10:11:51 ERROR  : ERROR:  update or delete on table "state" violates foreign key constraint "fk6p2u50v8fg2y0js6djc6xanit" on table "city"
+DETAIL:  Key (state_id)=(1) is still referenced from table "city".
+2018-08-16 10:12:49 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:12:55 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:13:00 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:13:14 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:13:57 ERROR  : ERROR:  cannot drop table applicant_registration because other objects depend on it
+DETAIL:  constraint fk5g5g4kxvmd6ux03hargid993 on table passwords depends on table applicant_registration
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:14:03 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:14:07 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:14:29 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:14:35 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:14:50 ERROR  : ERROR:  cannot drop table applicant_registration because other objects depend on it
+DETAIL:  constraint fk5g5g4kxvmd6ux03hargid993 on table passwords depends on table applicant_registration
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:15:01 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:15:26 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:15:52 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:16:22 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:16:29 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:16:45 ERROR  : ERROR:  cannot drop table applicant_registration because other objects depend on it
+DETAIL:  constraint fk5g5g4kxvmd6ux03hargid993 on table passwords depends on table applicant_registration
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:16:51 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:53:54 ERROR  : ERROR:  cannot drop table city because other objects depend on it
+DETAIL:  constraint fk9luocdp1b25o9s7cofb30ee50 on table applicant_registration depends on table city
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2018-08-16 10:54:22 ERROR  : ERROR:  cannot drop table state because other objects depend on it
+DETAIL:  constraint fke3ni3l2nhjhyksa4oxt7oms6j on table applicant_registration depends on table state
+constraint fk6p2u50v8fg2y0js6djc6xanit on table city depends on table state
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
