@@ -28,7 +28,7 @@ static Scanner a=new Scanner(System.in);
 	    	System.out.println("the total price is "+price);
 	    	}
 	    	else {
-	    		System.out.println("the total price is "+price);
+	    		System.out.println("the total price of the maruthi suziki is "+price);
 	    	}
 	    	break;
 	    	
